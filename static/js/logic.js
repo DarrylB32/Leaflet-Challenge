@@ -58,7 +58,7 @@ function chooseColor(depth) {
 var max = 50;
 var min = 50;
 // Store our API endpoint inside queryUrl
-var queryUrl = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_week.geojson";
+var queryUrl = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson";
 
 
 d3.json(queryUrl, function (data) {
