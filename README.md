@@ -13,4 +13,7 @@ This script utilizes Leaflet to plot all of the earthquakes within the past 7 da
 ![Screenshot](ReadMe_Resources/Screenshot.png)
  
 ### Additional Notes
-Updates will be made to provide a larger color spectrum to reflect the depth of the earthquake along with making the opacity of the markers static and solid. The legend will be given its own background and reformatted for easier readability and presentation. Lastly, additional data will be added to the map that will be selected via layer controls.
+Updates will be made to provide a larger color spectrum to reflect the depth of the earthquake along with making the opacity of the markers static and solid. The legend will be given its own background and reformatted for easier readability and presentation. 
+![Screenshot](ReadMe_Resources/Screenshot2.png)
+Lastly, additional data will be added to the map that will be selected via layer controls.
+![Screenshot](ReadMe_Resources/Screenshot3.png)
