@@ -1,4 +1,4 @@
-  // Define streetmap and darkmap layers
+  // Streetmap and darkmap layers
   var global_map = L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}", {
     attribution: "© <a href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>",
     tileSize: 512,
@@ -8,25 +8,25 @@
     accessToken: API_KEY
   });
 
-//Create empty LayerGroups
+//Empty LayerGroups
 var layers = {
   quake_layer: new L.LayerGroup(),
 
 };
 
-// Creating map object
+// Map object creation
 var myMap = L.map("map", {
   center: [0,0],
   zoom: 3,
   layers: [global_map, layers.quake_layer],
 });
 
-// Create an overlayMaps object to hold the dining layer
+// OverlayMaps object to hold the dining layer
 var overlays = {
   'Earthquakes':layers.quake_layer,
 };
 
-// Create a layer control, pass in the baseMaps and overlayMaps. Add the layer control to the map
+// Layer control for baseMaps and overlayMaps
 L.control.layers(null, overlays, { collapsed: false }).addTo(myMap);
 
 var limits=[];
@@ -80,7 +80,7 @@ d3.json(queryUrl, function (data) {
     }
   }
   
-  // Creating a geoJSON layer with the retrieved data
+  // geoJSON layer with the retrieved data
   L.geoJSON(data, {
     pointToLayer: function (geoJsonPoint, latlng) {
  
@@ -126,7 +126,7 @@ d3.json(queryUrl, function (data) {
 console.log(limits);
 var ranges = [0 , 250 , 500];
 
-// Set up the legend
+// Map Legend Setup
 var legend = L.control({ position: "bottomright" });
 legend.onAdd = function() {
   var div = L.DomUtil.create("div", "info legend");
@@ -135,7 +135,7 @@ legend.onAdd = function() {
   var labels = [];
 
 
-  // Add min & max
+  // Min & max for legend
   var legendInfo = "<h1>Depth Ranges Legend</h1>" +
     "<div class=\"labels\">" +
       "<div class=\"Yellow\">Yellow >"+ ranges[0] + "</div>" +

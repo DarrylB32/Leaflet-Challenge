@@ -7,7 +7,7 @@ This script utilizes Leaflet to plot all of the earthquakes within the past 7 da
 * HTML
 
 ### User Instructions
-* Clone the repository: git clone https://github.com/DarrylB32/Leaflet-Mapping_Earthquake_Locations_and_Intesity
+* Clone the repository: git clone https://github.com/DarrylB32/Leaflet-Mapping_Earthquake_Locations_and_Intesity.git 
 *  In command: python -m http.server 
 *  In web browser: http://localhost:8000/
 ![Screenshot](ReadMe_Resources/Screenshot.png)
